@@ -10,7 +10,32 @@
   <artifactId>quickfix-maven-prepostbuilder-projectaction</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>hpi</packaging>
+  <name>Quickfix Maven PrepostBuilder Projectaction plugin</name>
+  <description>Quickfix to call getProjectAction for prebuilders and postbuilders of MavenModuleSet.</description>
 
+  <url>https://github.com/ikedam/quickfix-maven-prepostbuilder-projectaction</url>
+  
+  <scm>
+    <connection>scm:git:git://github.com/ikedam/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:git@github.com:ikedam/${project.artifactId}.git</developerConnection>
+    <url>https://github.com/ikedam/${project.artifactId}</url>
+  </scm>
+  
+  <developers>
+    <developer>
+      <id>ikedam</id>
+      <name>IKEDA Yasuyuki</name>
+    </developer>
+  </developers>
+  
+  <licenses>
+    <license>
+      <name>The MIT license</name>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  
   <dependencies>
     <dependency>
       <groupId>org.jenkins-ci.main</groupId>
@@ -32,5 +57,23 @@
       <url>http://repo.jenkins-ci.org/public/</url>
     </pluginRepository>
   </pluginRepositories>
-
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+  
+  <!-- Configurations to distribute to private plugin repository. -->
+  <distributionManagement>
+    <repository>
+      <id>internal.repo.release</id>
+      <name>Internal Repository for Release</name>
+      <url>${internal.repo.path}/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>internal.repo.snapshot</id>
+      <name>Internal Repository for snapshot</name>
+      <url>${internal.repo.path}/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
