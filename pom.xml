@@ -8,7 +8,7 @@
 
   <groupId>jp.ikedam.jenkins.plugins</groupId>
   <artifactId>quickfix-maven-prepostbuilder-projectaction</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>hpi</packaging>
   <name>Quickfix Maven PrepostBuilder Projectaction plugin</name>
   <description>Quickfix to call getProjectAction for prebuilders and postbuilders of MavenModuleSet.</description>
